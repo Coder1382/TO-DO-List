@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="My To-Do list">
+        <title> TO-DO </title>
+        <link rel="icon" type="x-image/icon" href="icon.png">
+        <link rel="stylesheet" href="reserve2.css">
+        <script src="reserve2.js"></script>
+    </head>
+    <body>
+        <div class="proto" style="display: none;">
+            <button class="checker"><span style="visibility: hidden;"></span></button>
+            <input class="task" type="text" readonly/>
+            <button class="eraser"> &#10060 </button> 
+        </div>
+        <div class="act" style="display: none;">
+            <button class="checker" style="opacity:0.5;" disabled><span style="visibility: hidden;"></span></button>
+            <input class="task" type="text" readonly/>
+            <button class="eraser" style="opacity:0.5;" disabled> &#10060 </button> 
+        </div>
+        <div class="ticked" style="display: none;">
+            <button class="checker" style="opacity:0.5;" disabled><span></span></button>
+            <input class="task" type="text" readonly/>
+            <button class="eraser" style="opacity:0.5;" disabled> &#10060 </button> 
+        </div>
+         <div id="main">
+            <div id="title"> TODOs </div>
+            <div id="query">
+                <button onclick="trigger();" title="Click to add a task"><span></span></button>
+                <input type="text" placeholder="Enter a task" maxlength="38" form="form" required autofocus/>
+            </div>
+            <div id="list"></div>
+            <div id="actual" style="display: none;"></div>
+            <div id="gone" style="display: none;"></div>
+            <div id="menu">
+                <span>
+                    <button id="diff" title='Difference between total and completed tasks'></button>
+                </span>
+                <span>
+                    <button id="all" title="All tasks" onclick="tab(1,'list');"> Total </button>
+                    <button id="active" title="Tasks underway" onclick="tab(2,'actual');"> Pending </button>
+                    <button id="done" title="Completed tasks" onclick="tab(3,'gone');"> Completed </button>
+                </span>
+                <span>
+                    <button id="clear" title="Delete completed tasks" onclick="clean();"> Clear ticked items </button>
+                </span>
+            </div>
+        </div>
+        <form id="form" style="display:none;">
+            <input form="form" type="submit"/>
+        </form>
+    </body>
+</html>

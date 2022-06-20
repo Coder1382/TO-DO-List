@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3vh;
+    color: darkslategrey;
+}
+input:focus{
+    outline: none;
+}
+body, html{
+    height: 100%;
+    background-color: hsl(100,50%,65%);
+}
+#main{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+#query, .proto, .act, .ticked{
+    border-bottom: 0.1vh dotted grey;
+    background-color: white;
+}
+#menu{
+    background-color: white;
+}
+#menu, #title{
+    margin: 2vh 0;
+}
+#main div:not(#list, #actual, #gone){
+    width: 100vh;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 1vh 0;
+}
+div #menu{
+    justify-content: space-between;
+}
+#menu span{
+    display: flex;
+    justify-content: space-between;
+}
+#menu button{
+    margin: 0 2vh;
+    border-width: 0.1vh;
+    border-color: grey;
+    border-style: none;
+    border-radius: 1vh;
+    font-size: 2vh;
+    padding: 1vh 1vh;
+}
+#title{
+    color: hsl(140,80%,30%);
+    font-variant: small-caps;
+    font-size: 5vh;
+    font-weight: 500;
+}
+input{
+    border: none;
+}
+#query input{
+    font-style: italic;
+    width: 88vh;
+    height: 6vh;
+}
+#query button, .proto button, .act button, .ticked button{
+    height: 6vh;
+    width: 6vh;
+    border: none;
+}
+button{
+    background-color: white;
+}
+#query span{
+    vertical-align: 0.3vh;
+    display: inline-block;
+    width: 2vh;
+    height: 2vh;
+    border-right: 0.5vh solid darkslategrey;
+    border-bottom: 0.5vh solid darkslategrey;
+    transform: rotateZ(45deg);
+}
+.proto input, .act input, .ticked input{
+    width: 80vh;
+    height: 6vh;
+}
+button.checker, button.checker, button.checker{
+    border-radius: 100vh;
+    border: 0.1vh solid grey;
+}
+.checker span{
+    vertical-align: 0.3vh;
+    display: inline-block;
+    width: 2.2vh;
+    height: 2.2vh;
+    border: none;
+    border-left: 0.305vh solid hsl(140,80%,30%);
+    border-bottom: 0.7vh solid hsl(140,80%,30%);
+    transform: skewY(-45deg) rotateZ(-25deg);
+}
+#clear:active{
+    border: 0.1vh solid grey;
+}
